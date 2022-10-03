@@ -17,16 +17,17 @@ class TasksMaster extends React.Component{
     toggleDescriptionEventHandler(taskID){
         const newState = {...this.state};
         newState['tasks'][taskID].showDescription = !this.state['tasks'][taskID].showDescription;
-        this.setState({...newState});
+        this.setState(newState);
     }
     render(){
         return(
-            <div className="Flex Row">
+            <div className="Flex Row PaddedBig">
                 {
                     Object.keys(this.state['tasks']).map((id)=>
                             <Task
                                 id = {id} 
                                 key={id}
+                                showDescription = {this.state.tasks[id].showDescription}
                                 taskNum = {this.state.tasks[id].taskNum} 
                                 title = {this.state.tasks[id].title} 
                                 description = {this.state.tasks[id].description} 

@@ -1,35 +1,27 @@
 import React from 'react';
+import '../../index.css';
+import './styles.css';
 
-class Task extends React.Component{
-    constructor(props){
-        super(props);
-        this.id = props.id;
-        this.taskNum = props.taskNum;
-        this.title = props.title;
-        this.description = props.description;
-        this.showDescription = false;
-        this.onClickEventHandler = props.onClickEventHandler;
-    }
-    render(){
+function Task(props){
         return (
-            <div className='TaskExterior'>
-                <div className='TaskInterior'>
-                    <p className='TaskNum'>{this.taskNum}</p>
-                    <p className='Title'>{this.title}</p>
+            <div className='TaskExterior BorderedSolid lightBG'>
+                <div className='TaskInterior Padded'>
+                    <div className='GrayBG AlignTextVerticalCenter BorderedSolid'>
+                        <p className='TaskNum WhiteText'>Task #{props.taskNum}:<br></br>{props.title}</p>
+                    </div>
                     <div className='ProgressBarExterior'>
                         <div className='ProgressBar'></div>
                     </div>
                     <div className='DescriptionBox'>
                         <button className='ToggleDescriptionView'
-                            onClick={()=>{this.onClickEventHandler(this.id)}}>EXPAND</button>
-                        <div className='Description'>
-                            {this.showDescription? <p>{this.description}</p> : null}
+                            onClick={()=>{props.onClickEventHandler(props.id)}}>EXPAND</button>
+                        <div className={`Description WhiteBg BorderedSolid`}>
+                            {!props.showDescription?null: <p>{props.description}</p>}
                         </div>
                     </div>
                 </div>
             </div>
         );
-    }
 }
 
 export default Task;

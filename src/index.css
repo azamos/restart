@@ -23,3 +23,31 @@ code {
 .Col{
   flex-direction: column;
 }
+
+.BorderedSolid{
+  border: 1px solid black;
+}
+.lightBG{
+  background-color: rgb(140, 213, 226);
+}
+.WhiteBg{
+  background-color: white;
+}
+.Padded{
+  padding: 5px;
+}
+.PaddedBig{
+  padding: 15px;
+}
+.WhiteText{
+  color: white;
+}
+.GrayBG{
+  background-color: gray;
+}
+.Underline{
+  text-decoration-line: underline;
+}
+.Invisible{
+  visibility: hidden;
+}
