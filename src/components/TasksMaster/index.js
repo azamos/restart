@@ -21,7 +21,7 @@ class TasksMaster extends React.Component{
     }
     render(){
         return(
-            <div className="Flex Row PaddedBig">
+            <div className="Flex Row PaddedBig TasksContainer">
                 {
                     Object.keys(this.state['tasks']).map((id)=>
                             <Task
@@ -30,7 +30,8 @@ class TasksMaster extends React.Component{
                                 showDescription = {this.state.tasks[id].showDescription}
                                 taskNum = {this.state.tasks[id].taskNum} 
                                 title = {this.state.tasks[id].title} 
-                                description = {this.state.tasks[id].description} 
+                                description = {this.state.tasks[id].description}
+                                completionStatus = {this.state.tasks[id].completionStatus} 
                                 onClickEventHandler = {this.toggleDescriptionEventHandler.bind(this)}>
                             </Task>)
                 }

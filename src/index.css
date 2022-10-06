@@ -51,3 +51,7 @@ code {
 .Invisible{
   visibility: hidden;
 }
+.TasksContainer{
+  flex-wrap: wrap;
+  gap: 1vw;
+}

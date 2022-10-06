@@ -1,5 +1,54 @@
 .TaskExterior{
-    width: 25vw;
+    width: 20vw;
     height: 25vh;
     text-align: center;
+}
+.Description{
+    overflow: hidden;
+}
+.ProgressBarExterior{
+    background-color: white;
+}
+.ProgressBar{
+    background-color: blue;
+    height: 3vh;
+}
+.Container{
+    background-color: white;
+}
+.Not-Started{
+    width: 0px;
+}
+.Planing-And-Prepearing{
+    width: 5%;
+}
+.Initiated{
+    width: 7%;
+}
+.Small-Progress{
+    width: 15%;
+}
+.More-Small-Progresss{
+    width: 20%;
+}
+.Quarter-Way-There{
+    width: 25%;
+}
+.Picking-Up-Pace{
+    width: 37.5%;
+}
+.Halfway{
+    width: 50%;
+}
+.Advanced{
+    width: 75%;
+}
+.Final-Approach{
+    width: 87.5%;
+}
+.Hiccup{
+    width: 95%;
+}
+.DONE{
+    width: 100%;
 }
